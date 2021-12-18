@@ -72,8 +72,6 @@ const Semantics: React.FC = () =>
     <div className='block'>
       <a className='button' href='http://www.google.com'>I'm also an anchor tag</a>
     </div>
-
-    test
   </>
 
 export default Semantics
