@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/james-jenkinson/react-typescript-webpack-template/issues"
   },
-  "homepage": "https://github.com/james-jenkinson/react-typescript-webpack-template#readme",
+  "homepage": "https://james-jenkinson.github.io/accessibility-demo/",
   "dependencies": {
     "bulma": "^0.9.3",
     "react": "^17.0.1",
