@@ -1,9 +1,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack');
 const path = require('path')
 
 /** @typedef {import('webpack').Configuration} WebpackConfiguration */
 
 const output = 'dist'
+
+const basename = process.env.basename
 
 /** @type {WebpackConfiguration} */
 const config = {
@@ -14,7 +17,10 @@ const config = {
   },
 
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html' })
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new webpack.DefinePlugin({
+      BASENAME: basename
+    })
   ],
 
   module: {
