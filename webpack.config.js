@@ -1,5 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const webpack = require('webpack');
+const webpack = require('webpack')
 const path = require('path')
 
 /** @typedef {import('webpack').Configuration} WebpackConfiguration */

@@ -1,1 +1,1 @@
-const BASENAME: string
+declare const BASENAME: string
