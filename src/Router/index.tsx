@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route
 } from 'react-router-dom'
@@ -11,7 +11,7 @@ import Semantics from '../routes/Semantics'
 const AppRouter: React.FC = () =>{
   console.log('basename', BASENAME)
 
-  return <Router basename={BASENAME}>
+  return <Router basename='/'>
     <Routes>
       <Route path='/' element={<Layout />}>
         <Route index element={<Semantics />} />
