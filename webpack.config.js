@@ -6,7 +6,7 @@ const path = require('path')
 
 const output = 'dist'
 
-const basename = process.env.basename
+const basename = process.env.PUBLIC_URL
 
 /** @type {WebpackConfiguration} */
 const config = {
