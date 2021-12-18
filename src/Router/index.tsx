@@ -8,7 +8,7 @@ import Layout from '../Layout'
 import Semantics from '../routes/Semantics'
 
 const AppRouter: React.FC = () =>
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route path='/' element={<Layout />}>
         <Route index element={<Semantics />} />
