@@ -1,9 +1,9 @@
 import React from 'react'
-import './App.css'
+import AppRouter from '../Router'
 
 const App: React.FC = () => (
   <div className='application-root'>
-    Hello world
+    <AppRouter />
   </div>
 )
 
