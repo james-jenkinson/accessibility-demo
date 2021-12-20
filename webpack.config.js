@@ -21,7 +21,7 @@ const config = {
     new HtmlWebpackPlugin({ template: './src/index.html' }),
     new CopyPlugin({
       patterns: [
-        { from: "src/locales", to: "locales" }
+        { from: 'src/locales', to: 'locales' }
       ]
     }),
     new webpack.DefinePlugin({
