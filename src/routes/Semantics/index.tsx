@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useTranslation } from 'react-i18next'
+import { languageContext } from '../../contexts/LanguageContext'
 
 const onClick = (): void => {
   window.alert('Clicked a button')
 }
 
-const Semantics: React.FC = () =>
-  <>
+const Semantics: React.FC = () => {
+  const { t } = useTranslation()
+
+  const { language, setLanguage } = useContext(languageContext)
+
+  const updateLanguage = () => {
+    const newLang = language === 'en' ? 'de' : 'en'
+    setLanguage(newLang)
+  }
+
+  return (<>
     <h1 className='title'>Usage of Semantic html elements</h1>
     <h2 className='subtitle'>Examples of incorrect semantics</h2>
     <p className='block'>
@@ -24,6 +35,14 @@ const Semantics: React.FC = () =>
       the button is correctly marked up using <code>button</code>,
       the element is reachable using tab
     </p>
+
+    <p>
+      {t('test')}
+    </p>
+
+    <button onClick={updateLanguage}>
+      Lang
+    </button>
 
     <div className='block'>
       <button className='button' onClick={onClick}>Click me!</button>
@@ -72,6 +91,7 @@ const Semantics: React.FC = () =>
     <div className='block'>
       <a className='button' href='http://www.google.com'>I'm also an anchor tag</a>
     </div>
-  </>
+  </>)
+}
 
 export default Semantics

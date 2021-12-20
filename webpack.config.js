@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
+const CopyPlugin = require('copy-webpack-plugin')
 const path = require('path')
 
 /** @typedef {import('webpack').Configuration} WebpackConfiguration */
@@ -18,6 +19,11 @@ const config = {
 
   plugins: [
     new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new CopyPlugin({
+      patterns: [
+        { from: "src/locales", to: "locales" }
+      ]
+    }),
     new webpack.DefinePlugin({
       BASENAME: basename
     })
