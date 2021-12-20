@@ -9,6 +9,8 @@ const output = 'dist'
 
 const basename = process.env.PUBLIC_URL
 
+console.log('BASENAME', basename)
+
 /** @type {WebpackConfiguration} */
 const config = {
   entry: './src/index.tsx',
