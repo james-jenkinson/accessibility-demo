@@ -7,7 +7,9 @@ const path = require('path')
 
 const output = 'dist'
 
-const basename = process.env.PUBLIC_URL
+const basename = process.env.NODE_ENV === 'production'
+  ? 'accessibility-demo'
+  : ''
 
 console.log('BASENAME', process.env.NODE_ENV)
 
@@ -27,7 +29,7 @@ const config = {
       ]
     }),
     new webpack.DefinePlugin({
-      BASENAME: basename
+      BASENAME: JSON.stringify(basename)
     })
   ],
 
