@@ -9,7 +9,7 @@ const output = 'dist'
 
 const basename = process.env.PUBLIC_URL
 
-console.log('BASENAME', basename)
+console.log('BASENAME', process.env.NODE_ENV)
 
 /** @type {WebpackConfiguration} */
 const config = {
