@@ -66,18 +66,13 @@ const Semantics: React.FC = () => {
 
       <p className='block'>
         <Trans i18nKey='correct a tag usage'>
-          The <code>a</code> tag should likewise be used for clickable elements that change the page
-          the user is currently on, this is true for both internal routing, routes that take you to
-          somewhere else within the current website, and external routing, that takes you to another site
-          altogether.
+          The <code>a</code> tag should used...
         </Trans>
       </p>
 
       <p className='block'>
         <Trans i18nKey='incorrect a tag usage'>
-          A common mistake is to use the <code>button</code> tag for something that is actually a link, simply
-          because the link is styled like a button (instead of the traditional blue underlined text). Semantically
-          however, this is still an anchor tag.
+          A common mistake is to use the <code>button</code> tag...
         </Trans>
       </p>
 

@@ -9,7 +9,7 @@
 	"I'm an anchor tag": "I'm an anchor tag",
 	"I'm also an anchor tag": "I'm also an anchor tag",
 	"This is still a button": "This is still a button",
-	"incorrect button example": "The following button behaves and is styled as a button, however in the <1>DOM</1> the element is marked up as a <1>div</1>",
+	"incorrect button example": "The following button behaves and is styled as a button, however in the <1>DOM</1> the element is marked up as a <3>div</3>",
 	"incorrect button accessibility": "As is, the button has bad accessibility, as it is not reachable via the keyboard using tab, if instead the button is correctly marked up using <1>button</1>, the element is reachable using tab",
 	"correct button usage": "The button element should be used for all clickable elements on the screen, that produce an effect, but do not result in a change to the url the user is currently on",
 	"complex button usage": "This is also true for more complex buttons, comprised of nested elements, for example an image",
