@@ -1,0 +1,17 @@
+{
+	"appConfig": {
+		"languageOptions": {
+			"default": "en",
+			"options": [
+				{
+					"value": "en",
+					"label": "En"
+				},
+				{
+					"value": "de",
+					"label": "De"
+				}
+			]
+		}
+	}
+}

@@ -1,20 +1,15 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const webpack = require('webpack')
 const CopyPlugin = require('copy-webpack-plugin')
 const path = require('path')
+const webpack = require('webpack')
+const config = require('config')
 
 /** @typedef {import('webpack').Configuration} WebpackConfiguration */
 
 const output = 'dist'
 
-const basename = process.env.NODE_ENV === 'production'
-  ? 'accessibility-demo'
-  : ''
-
-console.log('BASENAME', process.env.NODE_ENV)
-
 /** @type {WebpackConfiguration} */
-const config = {
+const webpackConfig = {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, output),
@@ -29,7 +24,7 @@ const config = {
       ]
     }),
     new webpack.DefinePlugin({
-      BASENAME: JSON.stringify(basename)
+      CONFIG: JSON.stringify(config.get('appConfig'))
     })
   ],
 
@@ -48,8 +43,11 @@ const config = {
   },
 
   resolve: {
+    alias: {
+      config: path.resolve(__dirname, './src/utils/config')
+    },
     extensions: ['.tsx', '.ts', '.js']
   }
 }
 
-module.exports = config
+module.exports = webpackConfig

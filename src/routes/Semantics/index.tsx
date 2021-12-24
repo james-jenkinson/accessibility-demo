@@ -1,6 +1,5 @@
-import React, { useContext } from 'react'
-import { useTranslation } from 'react-i18next'
-import { languageContext } from '../../contexts/LanguageContext'
+import React from 'react'
+import { Trans, useTranslation } from 'react-i18next'
 
 const onClick = (): void => {
   window.alert('Clicked a button')
@@ -9,88 +8,82 @@ const onClick = (): void => {
 const Semantics: React.FC = () => {
   const { t } = useTranslation()
 
-  const { language, setLanguage } = useContext(languageContext)
-
-  const updateLanguage = (): void => {
-    const newLang = language === 'en' ? 'de' : 'en'
-    setLanguage(newLang)
-  }
-
   return (
     <>
-      <h1 className='title'>Usage of Semantic html elements</h1>
-      <h2 className='subtitle'>Examples of incorrect semantics</h2>
+      <h1 className='title'>{t('Usage of Semantic html elements')}</h1>
+      <h2 className='subtitle'>{t('Examples of incorrect semantics')}</h2>
       <p className='block'>
-        The following button behaves and is styled as a button,
-        however in the <a href='https://en.wikipedia.org/wiki/Document_Object_Model'>DOM</a> the
-        element is marked up as a <code>div</code>
+        <Trans i18nKey='incorrect button example'>
+          The following button behaves...
+          in the <a href='https://en.wikipedia.org/wiki/Document_Object_Model'>DOM</a>...
+          marked up as a <code>div</code>...
+        </Trans>
       </p>
 
       <div className='block'>
-        <div className='button' onClick={onClick}>Click me!</div>
+        <div className='button' onClick={onClick}>{t('Click me!')}</div>
       </div>
 
       <p className='block'>
-        As is, the button has bad accessibility, as it is
-        not reachable via the keyboard using tab, if instead
-        the button is correctly marked up using <code>button</code>,
-        the element is reachable using tab
+        <Trans i18nKey='incorrect button accessibility'>
+          As is, the button has bad accessibility...
+          if correctly marked up using <code>button</code>...
+        </Trans>
       </p>
-
-      <p>
-        {t('test')}
-      </p>
-
-      <button onClick={updateLanguage}>
-        Lang
-      </button>
 
       <div className='block'>
-        <button className='button' onClick={onClick}>Click me!</button>
+        <button className='button' onClick={onClick}>{t('Click me!')}</button>
       </div>
 
-      <h2 className='subtitle'>Examples of correct semantics</h2>
-      <h3 className='susbtitle is-3'>Button</h3>
+      <h2 className='subtitle'>{t('Examples of correct semantics')}</h2>
+      <h3 className='susbtitle is-3'>{t('Button')}</h3>
       <p className='block'>
-        The button element should be used for all clickable elements on the screen,
-        that produce an effect, but do not result in a change to the url the user is
-        currently on
+        <Trans i18nKey='correct button usage'>
+          The button element should be used for...
+          but does not change the url...
+        </Trans>
       </p>
       <p className='block'>
-        This is also true for more complex buttons, comprised of nested elements, for example an image
+        <Trans i18nKey='complex button usage'>
+          This is also true for more complex buttons...
+        </Trans>
       </p>
       <div className='block'>
         <button onClick={onClick}>
           <div className='card is-clickable'>
             <div className='card-header'>
-              <div className='card-header-title'>This is still a button</div>
+              <div className='card-header-title'>{t('This is still a button')}</div>
             </div>
             <img className='card-image' src='https://picsum.photos/500/300' />
             <div className='card-content'>
-              Click me please
+              {t('Click me please')}
             </div>
           </div>
         </button>
       </div>
 
-      <h3 className='subtitle is-3'>Anchor / link</h3>
+      <h3 className='subtitle is-3'>{t('Anchor / link')}</h3>
 
       <p className='block'>
-        The <code>a</code> tag should likewise be used for clickable elements that change the page
-        the user is currently on, this is true for both internal routing, routes that take you to
-        somewhere else within the current website, and external routing, that takes you to another site
-        altogether.
+        <Trans i18nKey='correct a tag usage'>
+          The <code>a</code> tag should likewise be used for clickable elements that change the page
+          the user is currently on, this is true for both internal routing, routes that take you to
+          somewhere else within the current website, and external routing, that takes you to another site
+          altogether.
+        </Trans>
       </p>
 
       <p className='block'>
-        A common mistake is to use the <button>tag</button> for something that is actually a link, simply
-        because the link is styled like a button (instead of the traditional blue underlined text). Semantically
-        however, this is still an anchor tag.
+        <Trans i18nKey='incorrect a tag usage'>
+          A common mistake is to use the <code>button</code> tag for something that is actually a link, simply
+          because the link is styled like a button (instead of the traditional blue underlined text). Semantically
+          however, this is still an anchor tag.
+        </Trans>
       </p>
 
-      <a className='block' href='http://www.google.com'>I'm an anchor tag</a>
+      <a className='block' href='http://www.google.com'>{t('I\'m an anchor tag')}</a>
       <div className='block'>
-        <a className='button' href='http://www.google.com'>I'm also an anchor tag</a>
+        <a className='button' href='http://www.google.com'>{t('I\'m also an anchor tag')}</a>
       </div>
     </>
   )
