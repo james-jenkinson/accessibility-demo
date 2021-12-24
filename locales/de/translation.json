@@ -1,3 +1,18 @@
 {
-	"test": "Mein test"
+	"Usage of Semantic html elements": "Verwendung von semantischen HTML Elementen",
+	"Examples of incorrect semantics": "Beispiele von falscher Semantik",
+	"Examples of correct semantics": "Beispiele von richtiger Semantik",
+	"Button": "Button",
+	"Anchor / link": "Anchor / Link",
+	"Click me!": "Click mich!",
+	"Click me please": "Bitte click mich",
+	"I'm an anchor tag": "Ich bin ein Anchor Tag",
+	"I'm also an anchor tag": "Ich bin auch ein Anchor Tag",
+	"This is still a button": "Das hier ist auch ein Button",
+	"incorrect button example": "Der folgende Button verhält sich, und wird gestylt als, ein Button, aber in der <1>DOM</1> das Element wurde als ein <1>div</1> geschrieben",
+	"incorrect button accessibility": "So ist der Button nicht barrierefrei, weil es kann nicht von der Tastatur erreicht werden durch die Tab Taste. Wenn der Button aber wird korrekt als ein <1>button</1> markiert, das Element kann durch die Tab Taste erreicht werden",
+	"correct button usage": "Das Button Element sollte für alle Elemente die eine Wirkung haben wenn geclickt, aber ändern nicht die aktuelle URL",
+	"complex button usage": "Das ist auch der Fall für komplexe Buttons, die aus eingenistiten Elementen bestehen, zum Beispiel ein Bild",
+	"correct a tag usage": "Das <1>a</1> Tag sollte hingegen für einen Link benutzt werden, das ändert die aktuelle Seite. Das gilt für interne Links, die innerhalb der App richten sowohl wie externe Links für eine andere Seite",
+	"incorrect a tag usage": "Ein typischer Fehler ist die Verwendung von dem <1>button</1> Tag für etwas das tatsächlich ein Link ist, nur weil der Link wie ein Button gestylt wird (statt der übliche blaue unterstrichene Text). Semantisch geshen aber ist das immer noch ein Anchor Tag"
 }

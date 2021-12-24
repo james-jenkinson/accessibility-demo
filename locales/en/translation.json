@@ -1,3 +1,18 @@
 {
-	"test": "My test"
+	"Usage of Semantic html elements": "Usage of Semantic HTML elements",
+	"Examples of incorrect semantics": "Examples of incorrect semantics",
+	"Examples of correct semantics": "Examples of incorrect semantics",
+	"Button": "Button",
+	"Anchor / link": "Anchor / link",
+	"Click me!": "Click me!",
+	"Click me please": "Click me please",
+	"I'm an anchor tag": "I'm an anchor tag",
+	"I'm also an anchor tag": "I'm also an anchor tag",
+	"This is still a button": "This is still a button",
+	"incorrect button example": "The following button behaves and is styled as a button, however in the <1>DOM</1> the element is marked up as a <1>div</1>",
+	"incorrect button accessibility": "As is, the button has bad accessibility, as it is not reachable via the keyboard using tab, if instead the button is correctly marked up using <1>button</1>, the element is reachable using tab",
+	"correct button usage": "The button element should be used for all clickable elements on the screen, that produce an effect, but do not result in a change to the url the user is currently on",
+	"complex button usage": "This is also true for more complex buttons, comprised of nested elements, for example an image",
+	"correct a tag usage": "The <1>a</1> tag should likewise be used for clickable elements that change the page the user is currently on, this is true for both internal routing, routes that take you to somewhere else within the current website, and external routing, that takes you to another site altogether.",
+	"incorrect a tag usage": "A common mistake is to use the <1>button</1> tag for something that is actually a link, simply because the link is styled like a button (instead of the traditional blue underlined text). Semantically however, this is still an anchor tag."
 }
