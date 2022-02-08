@@ -1,0 +1,6 @@
+{
+	"webpackConfig": {
+		"mode": "production",
+		"minimize": true
+	}
+}

@@ -15,6 +15,14 @@ const webpackConfig = {
     path: path.resolve(__dirname, output),
     filename: 'app.[chunkhash].js'
   },
+  mode: config.get('webpackConfig.mode'),
+
+  optimization: {
+    usedExports: true,
+    removeAvailableModules: true,
+    mergeDuplicateChunks: true,
+    minimize: config.get('webpackConfig.minimize'),
+  },
 
   plugins: [
     new HtmlWebpackPlugin({ template: './src/index.html' }),

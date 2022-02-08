@@ -2,6 +2,7 @@
   "name": "react-typescript-webpack-template",
   "version": "0.0.1",
   "description": "[Change description here]",
+  "sideEffects": false,
   "scripts": {
     "build": "webpack",
     "lint": "ts-standard",
