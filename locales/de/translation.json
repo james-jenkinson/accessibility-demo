@@ -9,7 +9,7 @@
 	"I'm an anchor tag": "Ich bin ein Anchor Tag",
 	"I'm also an anchor tag": "Ich bin auch ein Anchor Tag",
 	"This is still a button": "Das hier ist auch ein Button",
-	"incorrect button example": "Der folgende Button verhält sich, und wird gestylt als, ein Button, aber in der <1>DOM</1> das Element wurde als ein <1>div</1> geschrieben",
+	"incorrect button example": "Der folgende Button verhält sich, und wird gestylt als, ein Button, aber in der <1>DOM</1> das Element wurde als ein <3>div</3> geschrieben",
 	"incorrect button accessibility": "So ist der Button nicht barrierefrei, weil es kann nicht von der Tastatur erreicht werden durch die Tab Taste. Wenn der Button aber wird korrekt als ein <1>button</1> markiert, das Element kann durch die Tab Taste erreicht werden",
 	"correct button usage": "Das Button Element sollte für alle Elemente die eine Wirkung haben wenn geclickt, aber ändern nicht die aktuelle URL",
 	"complex button usage": "Das ist auch der Fall für komplexe Buttons, die aus eingenistiten Elementen bestehen, zum Beispiel ein Bild",
